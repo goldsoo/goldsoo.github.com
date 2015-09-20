@@ -1,0 +1,123 @@
+/**
+ * Site header
+ */
+.headerWrap {
+	border-bottom: 3px solid $grey-color-light;
+	min-height: 56px;
+	position: relative;
+	background-color: #f1f1f1;
+}
+
+.mainTitle {
+	font-size: 30px;
+	color: #222;
+	font-weight: bold;
+	line-height: 56px;
+	letter-spacing: -1px;
+	//text-transform: uppercase;
+	%clearFix
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: $grey-color-dark;
+	}
+}
+
+.siteGnbWrap {
+	width: 100%;
+
+	ul {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+
+		li {
+			display: table-cell;
+			text-align: center;
+
+			a {
+				display: block;
+				color: #fff;
+				padding: 0 10px;
+				background-color: #ccc;
+
+				&:hover {
+					color: #666;
+					background-color: #ddd;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+	border-top: 1px solid $grey-color-light;
+	padding: $spacing-unit 0;
+}
+
+.footer-heading {
+	font-size: 18px;
+	margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+	list-style: none;
+	margin-left: 0;
+}
+
+.footer-col-wrapper {
+	font-size: 15px;
+	color: $grey-color;
+	margin-left: -$spacing-unit / 2;
+	@extend %clearfix;
+}
+
+.footer-col {
+	float: left;
+	margin-bottom: $spacing-unit / 2;
+	padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+	width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+	width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+	width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+	width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+	width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+	width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+	.footer-col-1,
+	.footer-col-2 {
+		width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+		width:         calc(50% - (#{$spacing-unit} / 2));
+	}
+
+	.footer-col-3 {
+		width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+		width:         calc(100% - (#{$spacing-unit} / 2));
+	}
+}
+
+@include media-query($on-palm) {
+	.footer-col {
+		float: none;
+		width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+		width:         calc(100% - (#{$spacing-unit} / 2));
+	}
+}
