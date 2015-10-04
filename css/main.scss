@@ -3,32 +3,67 @@
 ---
 @charset "utf-8";
 
+.mainIntroWrap {
+	background-color: #9f7899;
+}
+
 .postListWrap {
+	padding: 50px 0;
+
 	.listTitle {
 		color: red;
 	}
+
 	ul {
+		margin-bottom: 5px;
+
 		li {
 			display: table;
 			table-layout: fixed;
 			width: 100%;
-			background-color: #ccc;
-			border : 1px solid #ddd;
-			border-radius: 4px;
-			 &:hover {
-			 	
-			 }
+			padding: 2px 0 1px;
+			background-color: #ddd;
+			margin-top: 1px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:hover {
+
+			}
 
 			h2 {
-				font-size: 14px;
 				display: table-cell;
+				width: 80%;
+				padding-left: 15px;
+				font-size: 14px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
 				text-align: left;
+				overflow: hidden;
 			}
 
 			span {
-				font-size: 11px;
 				display: table-cell;
+				width: 20%;
+				padding-right: 15px;
+				font-size: 11px;
 				text-align: right;
+			}
+		}
+	}
+
+	p {
+		font-size: 11px;
+		text-align: right;
+		color: #999;
+
+		a {
+			color: #999;
+
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
