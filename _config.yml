@@ -11,6 +11,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: goldsoo
 facebook_username: goldsooyoung
 github_username:  goldsoo
+comments : disqus_shortname _goldsoo
 
 # Build settings
 markdown: kramdown
