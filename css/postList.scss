@@ -1,0 +1,78 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+.post-header {
+    padding-top: 50px;
+}
+
+.postListWrap {
+    padding: 20px 0 50px;
+
+    .listTitle {
+        color: #777;
+        font-weight: 200;
+        padding-bottom: 10px;
+    }
+
+    .postList {
+
+        ul {
+            margin-bottom: 5px;
+
+            li {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                padding: 2px 0 1px;
+                margin-top: 1px;
+                border-bottom: 1px solid #ddd;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                a {
+                    display: table-cell;
+                    width: 80%;
+                    padding-left: 15px;
+                    font-size: 14px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    text-align: left;
+                    overflow: hidden;
+
+                    &:hover {
+                        color: #ccc;
+                        text-decoration: none;
+                    }
+                }
+
+                span {
+                    display: table-cell;
+                    width: 20%;
+                    padding-right: 15px;
+                    font-size: 11px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 11px;
+        text-align: right;
+        color: #999;
+        padding-right: 15px;
+
+        a {
+            color: #999;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

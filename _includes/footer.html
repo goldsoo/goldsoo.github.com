@@ -1,11 +1,13 @@
 <footer class="site-footer">
 	<div class="wrapper">
 		<div class="footerWrap">
-			<h2 class="footer-heading">{{ site.title }}</h2>
+			<h2 class="footer-heading">
+				<a href="{{ site.baseurl }}/">{{ site.title }}</a>
+			</h2>
 			<div class="infoContnetsWrap">
 				<div class="contents">
 					<ul class="contactList">
-						<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+						<li><a class="myMail" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
 						{% if site.github_username %}
 						<li>
 							<a href="https://github.com/{{ site.github_username }}">
