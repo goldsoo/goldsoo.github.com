@@ -4,32 +4,23 @@
 @charset "utf-8";
 
 .mainIntroWrap {
-    background-color: #9f7899;
     margin-bottom: 3rem;
-}
+    border-bottom: .1rem solid #ddd;
 
-.newestInfoWrap {
-    margin-bottom: 3rem;
+    .mainImg {
+        border-left: .1rem solid #ddd;
+        border-right: .1rem solid #ddd;
 
-    .title {
-        display: inline-block;
-        padding-right: 1rem;
-
-        a {
-            font-size: 2rem;
-            color: #333;
+        img {
+            width: 100%;
         }
-    }
-    .date {
-        font-size: 1.1rem;
     }
 }
 
 .postListWrap {
-    padding: 1rem 3rem;
+    padding: 2rem;
     margin-bottom:  3rem;
-    border: .1rem solid #ccc;
-    border-radius: .4rem;
+    border: .1rem solid #ddd;
 
     .postList {
         ul {
@@ -73,13 +64,43 @@
         text-decoration: none;
     }
 
+    .arrow {
+        position: relative;
+
+        em {
+            font-size: 0;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            margin: auto 0;
+            border: .6rem solid #999;
+            border-top-color: rgba(0,0,0,0);
+            border-bottom-color: rgba(0,0,0,0);
+        }
+    }
+
     .prev {
         margin-right: 1rem;
+
+        &:after {
+            left: 0;
+            border-left: 0;
+        }
     }
 
     a.prev {
-        color: #222;
+        color: #666;
         font-weight: bold;
+
+        &:after {
+            border-right-color: #666;
+        }
     }
 
     .num {
@@ -89,18 +110,27 @@
         color: #999;
     }
 
-    em.num {
-        color: #222;
-        border-color: #222;
+    span.num {
+        color: #666;
+        border-color: #666;
         font-weight: bold;
     }
 
     .next {
         margin-left: 1rem;
+
+        &:after {
+            right: 0;
+            border-right: 0;
+        }
     }
 
     a.next {
-        color: #222;
+        color: #666;
         font-weight: bold;
+
+        &:after {
+            border-left-color: #666;
+        }
     }
 }

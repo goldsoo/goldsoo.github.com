@@ -7,7 +7,7 @@ title: main title
 <div class="mainIntroWrap">
   <div class="wrapper">
     <div class="mainImg">
-      <img src="http://placehold.it/740x200/000000">
+      <img src="http://placehold.it/740x250/ffffff">
     </div>
   </div>
 </div>
@@ -32,14 +32,18 @@ title: main title
   {% if paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a class="arrow prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; prev</a>
+        <a class="arrow prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="prev">
+          <em>prev</em>
+        </a>
       {% else %}
-        <span class="arrow prev">&laquo; prev</span>
+        <span class="arrow prev">
+          <em>prev</em>
+        </span>
       {% endif %}
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
-          <em class="num">{{ page }}</em>
+          <span class="num">{{ page }}</span>
         {% elsif page == 1 %}
           <a class="num" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
         {% else %}
@@ -48,9 +52,13 @@ title: main title
       {% endfor %}
 
       {% if paginator.next_page %}
-        <a class="arrow next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">next &raquo;</a>
+        <a class="arrow next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="next">
+          <em>next</em>
+        </a>
       {% else %}
-        <span class="arrow next">next &raquo;</span>
+        <span class="arrow next">
+          <em>next</em>
+        </span>
       {% endif %}
     </div>
   {% endif %}

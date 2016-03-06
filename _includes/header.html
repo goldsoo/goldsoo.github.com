@@ -1,14 +1,16 @@
-<header class="headerWrap">
+<header class="headerWrapper">
   <div class="wrapper">
-    <a class="mainTitle" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    <nav class="siteGnbWrap">
-      <ul>
-        {% for category in site.categories %}
-          <li>
-              <a href="/{{ category | first }}/">{{ category | first }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="headerWrap">
+      <a class="mainTitle" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <nav class="siteGnbWrap">
+        <ul>
+          {% for category in site.categories %}
+            <li>
+                <a href="/{{ category | first }}/">{{ category | first }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
