@@ -21,7 +21,7 @@ title: main title
           <li>
             <a href="{{ post.url }}">
               <strong>{{ post.title }}</strong>
-              <span>{{ post.excerpt | remove: '<code>' | remove: '</code>' | truncatewords: 40 }}</span>
+              <span>{{ post.excerpt | truncatewords: 40 }}</span>
             </a>
           </li>
         {% endfor %}
