@@ -10,7 +10,7 @@ pagename: post
       <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
     </header>
 
-    <article class="post-content">
+    <article class="postContent">
       {{ content }}
     </article>
 
@@ -31,10 +31,19 @@ pagename: post
     {% endfor %}
 
     {% if prev_post %}
-      <a class="prev" href="{{ prev_post }}">&laquo; prev</a>
+      <a class="arrow prev" href="{{ prev_post }}">
+        <em>prev</em>
+      </a>
     {% endif %}
+    <a href="/{{ page.categories.last }}/">
+      <span class="listIndex">
+        {{ page.categories.last }}
+      </span>
+    </a>
     {% if next_post %}
-      <a class="next" href="{{ next_post }}">next &raquo;</a>
+      <a class="arrow next" href="{{ next_post }}">
+        <em>next</em>
+      </a>
     {% endif %}
   </div> 
 
@@ -43,8 +52,10 @@ pagename: post
       <ul>
         {% for post in site.categories[page.categories.last] %}
           <li>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="postLink" href="{{ post.url | prepend: site.baseurl }}">
+              <span class="postTitle">{{page.categories.last}} {{ post.title }}</span>
+              <span class="postMeta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
           </li>
         {% endfor %}
       </ul>

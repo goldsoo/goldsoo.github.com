@@ -98,10 +98,10 @@ a {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    border-left: .4rem solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
+    font-size: 1.8rem;
+    letter-spacing: -.1rem;
     font-style: italic;
 
     > :last-child {
@@ -112,26 +112,11 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
 code {
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+    padding: .1rem .5rem;
+    border-radius: .2rem;
+    background-color: #e7e0e0;
+    color: #cb3837;
 }
 
 /**

@@ -2,9 +2,20 @@
  * Syntax highlighting styles
  */
 .highlight {
+    padding: 1rem 0;
     background: #fff;
 
-    pre { background-color: #272822; }
+    pre {
+        padding: .8rem 1.2rem;
+        background-color: #222;
+        overflow-x: scroll;
+
+        > code {
+                border: 0;
+                background: transparent;
+        }
+    }
+    
     .hll { background-color: #272822; }
     .c { color: #75715e } /* Comment */
     .err { color: #960050; background-color: #1e0010 } /* Error */
