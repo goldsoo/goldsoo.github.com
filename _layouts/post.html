@@ -14,38 +14,39 @@ pagename: post
       {{ content }}
     </article>
 
-  <div class="pageNavigation">
-    {% for post in site.categories[page.categories.last] %}
-        {% if post.url == page.url %}
-            {% assign post_index0 = forloop.index0 %}
-            {% assign post_index1 = forloop.index %}
-        {% endif %}
-    {% endfor %}
-    {% for post in site.categories[page.categories.last] %}
-        {% if post_index0 == forloop.index %}
-            {% assign next_post = post.url %}
-        {% endif %}
-        {% if post_index1 == forloop.index0 %}
-            {% assign prev_post = post.url %}
-        {% endif %}
-    {% endfor %}
+    <div class="pageNavigation">
+      {% for post in site.categories[page.categories.last] %}
+          {% if post.url == page.url %}
+              {% assign post_index0 = forloop.index0 %}
+              {% assign post_index1 = forloop.index %}
+          {% endif %}
+      {% endfor %}
+      {% for post in site.categories[page.categories.last] %}
+          {% if post_index0 == forloop.index %}
+              {% assign next_post = post.url %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+              {% assign prev_post = post.url %}
+          {% endif %}
+      {% endfor %}
 
-    {% if prev_post %}
-      <a class="arrow prev" href="{{ prev_post }}">
-        <em>prev</em>
+      {% if prev_post %}
+        <a class="arrow prev" href="{{ prev_post }}">
+          <em>prev</em>
+        </a>
+      {% endif %}
+      <a href="/{{ page.categories.last }}/">
+        <span class="listIndex">
+          {{ page.categories.last }}
+        </span>
       </a>
-    {% endif %}
-    <a href="/{{ page.categories.last }}/">
-      <span class="listIndex">
-        {{ page.categories.last }}
-      </span>
-    </a>
-    {% if next_post %}
-      <a class="arrow next" href="{{ next_post }}">
-        <em>next</em>
-      </a>
-    {% endif %}
-  </div> 
+      {% if next_post %}
+        <a class="arrow next" href="{{ next_post }}">
+          <em>next</em>
+        </a>
+      {% endif %}
+    </div> 
+  </div>
 
   <div class="postListWrap">
     <div class="postList">
