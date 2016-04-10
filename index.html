@@ -1,7 +1,8 @@
 ---
 layout: default
 pagename: main
-title: main title
+title: main
+comments: false
 ---
 
 <div class="mainIntroWrap">
@@ -13,16 +14,14 @@ title: main title
 </div>
 
 <div class="wrapper">
-
   <div class="postListWrap">
     <div class="postList">
       <ul>
         {% for post in paginator.posts %}
           <li>
-            <a href="{{ post.url }}">
-              <strong>{{ post.title }}</strong>
-              <span>{{ post.excerpt | truncatewords: 40 }}</span>
-            </a>
+            <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+            {{ post.excerpt | truncatewords: 40 }}
+             <a class="counter" href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
           </li>
         {% endfor %}
       </ul>

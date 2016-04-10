@@ -8,9 +8,14 @@
 <div class="page-content">
   {{ content }}
 
+
+{% if page.comments %}
   {% include comments.html %}
+{% endif %}
 </div>
 
 {% include footer.html %}
+
+<script id="dsq-count-scr" src="//goldsoo.disqus.com/count.js" async></script>
 </body>
 </html>

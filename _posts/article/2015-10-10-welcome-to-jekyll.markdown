@@ -3,6 +3,7 @@ layout: post
 title:  "list3"
 date:   2015-10-10 12:15:14
 categories: article
+comments: ture
 ---
 
 Jekyll also offers powerful support for code snippets:

@@ -1,6 +1,5 @@
 # Site settings
 title: I'm soo
-pageName: aaa
 email: golyheart@gmail.com
 description: ....
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -17,5 +16,12 @@ paginate_path: /list/:num
 # Build settings
 markdown: kramdown
 
+kramdown:
+   input: GFM
+
 #separator
 excerpt_separator: <!--more-->
+
+# gems
+gems:
+  - jekyll-paginate
