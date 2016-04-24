@@ -1,12 +1,11 @@
 ---
 layout: default
-pagename: post
 ---
 
-<div class="wrapper">
-  <div class="postInfoWrap">
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
+<div class="postInfoWrapper">
+  <div class="wrapper">
+    <header class="postTitle">
+      <h1 class="title">{{ page.title }}</h1>
       <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
     </header>
 
@@ -46,20 +45,20 @@ pagename: post
         </a>
       {% endif %}
     </div> 
-  </div>
 
-  <div class="postListWrap">
-    <div class="postList">
-      <ul>
-        {% for post in site.categories[page.categories.last] %}
-          <li>
-            <a class="postLink" href="{{ post.url | prepend: site.baseurl }}">
-              <span class="postTitle">{{page.categories.last}} {{ post.title }}</span>
-              <span class="postMeta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+    <div class="postListWrap">
+      <div class="postList">
+        <ul>
+          {% for post in site.categories[page.categories.last] %}
+            <li>
+              <a class="postLink" href="{{ post.url | prepend: site.baseurl }}">
+                <span class="postTitle">{{page.categories.last}} {{ post.title }}</span>
+                <span class="postMeta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
 </div>
