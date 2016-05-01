@@ -4,16 +4,18 @@ layout: default
 
 <div class="postInfoWrapper">
   <div class="wrapper">
-    <header class="postTitle">
-      <h1 class="title">{{ page.title }}</h1>
-      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
-    </header>
+    <div class="postContents">
+      <header class="postTitle">
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+      </header>
 
-    <article class="postContent">
-      {{ content }}
-    </article>
+      <article class="postContent">
+        {{ content }}
+      </article>
+    </div>
 
-    <div class="pageNavigation">
+    <div class="pagination">
       {% for post in site.categories[page.categories.last] %}
           {% if post.url == page.url %}
               {% assign post_index0 = forloop.index0 %}
@@ -34,11 +36,6 @@ layout: default
           <em>prev</em>
         </a>
       {% endif %}
-      <a href="/{{ page.categories.last }}/">
-        <span class="listIndex">
-          {{ page.categories.last }}
-        </span>
-      </a>
       {% if next_post %}
         <a class="arrow next" href="{{ next_post }}">
           <em>next</em>
@@ -52,8 +49,8 @@ layout: default
           {% for post in site.categories[page.categories.last] %}
             <li>
               <a class="postLink" href="{{ post.url | prepend: site.baseurl }}">
-                <span class="postTitle">{{page.categories.last}} {{ post.title }}</span>
-                <span class="postMeta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="title">{{ post.title }}</span>
+                <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
               </a>
             </li>
           {% endfor %}

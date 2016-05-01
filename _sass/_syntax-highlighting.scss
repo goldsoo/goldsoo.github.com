@@ -1,11 +1,12 @@
 /**
  * Syntax highlighting styles
  */
+.highlighter-rouge,
 .highlight {
-    padding: 1rem 0;
-    background: #fff;
-
+    font-size: 1.4rem;
+    
     pre {
+        margin: 1rem 0;
         padding: .8rem 1.2rem;
         background-color: #222;
         overflow-x: scroll;
@@ -15,7 +16,7 @@
                 background: transparent;
         }
     }
-    
+
     .hll { background-color: #272822; }
     .c { color: #75715e } /* Comment */
     .err { color: #960050; background-color: #1e0010 } /* Error */
@@ -79,4 +80,14 @@
     .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
     .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
     .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+}
+/**
+ * Code formatting
+ */
+
+code.highlighter-rouge {
+    padding: 0 .2rem;
+    background-color: #e6e0e0;
+    border-radius: .2rem;
+    color: #cb3837;
 }

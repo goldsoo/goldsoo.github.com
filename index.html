@@ -17,8 +17,10 @@ comments: false
         <ul>
           {% for post in paginator.posts %}
             <li>
-              <a class="title" href="{{ post.url }}">{{ post.title }}</a>
-              {{ post.excerpt | truncatewords: 40 }}
+              <a class="title" href="{{ post.url }}">
+                <span class="title">{{ post.title }}</span>
+                <span class="contents">{{ post.excerpt | strip_html | truncatewords: 40 }}</span>
+              </a>
                <a class="counter" href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
             </li>
           {% endfor %}

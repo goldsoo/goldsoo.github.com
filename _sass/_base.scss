@@ -12,10 +12,7 @@
 html {
     font-family: $base-font-family;
     font-size: 62.5%;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    font-weight: 200;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -82,15 +79,6 @@ li {
 a {
     color: $text-color;
     text-decoration: none;
-
-    &:visited {
-        color: $text-color;
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
 }
 
 /**
@@ -109,14 +97,8 @@ blockquote {
     }
 }
 
-/**
- * Code formatting
- */
-code {
-    padding: .1rem .5rem;
-    border-radius: .2rem;
-    background-color: #e7e0e0;
-    color: #cb3837;
+code, pre {
+    font-family: "Consolas", "Menlo", "Monaco"," Courier", "monospace";
 }
 
 /**

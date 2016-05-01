@@ -5,7 +5,6 @@
 
 //main
 .mainIntroWrap {
-
     .mainImg {
         border-left: .1rem solid #ddd;
         border-right: .1rem solid #ddd;
@@ -18,6 +17,7 @@
     .postListWrap {
         padding: 3rem 0;
         border-top: .1rem solid #ddd;
+        font-size: 1.6rem;
 
         .postList {
             padding: 2rem;
@@ -27,41 +27,46 @@
             ul {
                 li {
                     position: relative;
-                    padding-left: .8rem;
-                    margin-top: .5rem;
+                    margin-top: 1.5rem;
+                    padding-left: 1rem;
 
                     &:first-child {
                         margin-top: 0;
                     }
 
                     &:before {
-                        content: "";
+                        content: "\2022";
                         position: absolute;
-                        width: .3rem;
-                        height: .1rem;
-                        top: .8rem;
+                        top: .6rem;
                         left: 0;
-                        background-color: #999;
+                        font-size: .6rem;
                     }
-                    
-                    a {
-                        font-size: 1.4rem;
-                        color: #222;
 
-                        &.title {
-                            display: block;
-                            font-weight: bold;
-                        }
+                    a {
+                        padding-bottom: .5rem;
+                        color: #222;
 
                         &.counter {
                             font-size: 1.2rem;
                             color: #aaa;
                         }
+
+                        .title {
+                            display: block;
+                            padding-bottom: .5rem;
+                            font-size: 2rem;
+                            line-height: 1;
+                            font-weight: 300;
+                        }
+
+                        .contents {
+                            font-size: 1.6rem;
+                            color: #666;
+                        }
                     }
 
                     p {
                         display: inline;
-                        font-size: 1.2rem;
                     }
                 }
             }
@@ -70,79 +75,19 @@
 
     .pagination {
         text-align: center;
-        font-size: 1.2rem;
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        .arrow {
-            position: relative;
-
-            em {
-                font-size: 0;
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                margin: auto 0;
-                border: .6rem solid #999;
-                border-top-color: rgba(0,0,0,0);
-                border-bottom-color: rgba(0,0,0,0);
-            }
-        }
-
-        .prev {
-            margin-right: 1rem;
-
-            &:after {
-                left: 0;
-                border-left: 0;
-            }
-        }
-
-        a.prev {
-            color: #666;
-            font-weight: bold;
-
-            &:after {
-                border-right-color: #666;
-            }
-        }
-
+        font-size: 0;
+        
+        .arrow,
         .num {
-            padding: .2rem .6rem;
-            border: .1rem solid #999;
+            display: inline-block;
+            padding: .7rem 1rem;
+            margin: 0 .2rem;
+            background: #ddd;
+            font-size: 1.6rem;
             line-height: 1;
-            color: #999;
-        }
 
-        span.num {
-            color: #666;
-            border-color: #666;
-            font-weight: bold;
-        }
-
-        .next {
-            margin-left: 1rem;
-
-            &:after {
-                right: 0;
-                border-right: 0;
-            }
-        }
-
-        a.next {
-            color: #666;
-            font-weight: bold;
-
-            &:after {
-                border-left-color: #666;
+            &:active {
+                background: #ccc;
             }
         }
     }
@@ -156,7 +101,7 @@
         padding-bottom: 2rem;
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.4rem;
             font-weight: normal;
             color: #555;
         }
@@ -166,57 +111,57 @@
         .postList {
             ul {
                 li {
-                    display: table;
-                    table-layout: fixed;
-                    width: 100%;
-                    padding: .2rem 0 .1rem;
-                    margin-top: .1rem;
-                    border-bottom: .1rem solid #ddd;
+                    position: relative;
+
+                    + li {
+                        margin-top: 2rem;
+                        padding-top: 2rem;
+                        border-top: .1rem solid #ddd;
+                    }
 
                     &:first-child {
                         margin-top: 0;
                     }
 
                     a {
-                        box-sizing: border-box;
-                        display: table-cell;
-                        width: auto;
-                        padding-left: 1.5rem;
-                        font-size: 1.2rem;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        text-align: left;
-                        overflow: hidden;
+                        position: relative;
+                        display: block;
+                        padding-left: 1rem;
+                        font-size: 1.6rem;
+                        color: #222;
 
-                        &:hover {
-                            color: #ccc;
-                            text-decoration: none;
+                        &:before {
+                            content: "\2022";
+                            position: absolute;
+                            top: .4rem;
+                            left: 0;
+                            font-size: .6rem;
+                        }
+
+                        .title {
+                            font-size: 2rem;
+                            line-height: 1;
+                        }
+
+                        .date {
+                            padding-left: .5rem;
+                            font-size: 1.2rem;
+                            line-height: 1;
+                            color: #999;
+                        }
+
+                        .contents {
+                            display: block;
+                            padding-top: 1rem;
+                            color: #666;
+
+                            p {
+                                display: inline;
+                                padding-right: .5rem;
+                                line-height: 2rem;
+                            }
                         }
                     }
-
-                    span {
-                        box-sizing: border-box;
-                        display: table-cell;
-                        width: 30%;
-                        padding-right: 1.5rem;
-                        font-size: 1.1rem;
-                        text-align: right;
-                    }
-                }
-            }
-        }
-
-        p {
-            font-size: 1.1rem;
-            text-align: right;
-            color: #999;
-            padding-right: 1.5rem;
-
-            a {
-                color: #999;
-
-                &:hover {
-                    text-decoration: underline;
                 }
             }
         }
@@ -226,93 +171,58 @@
 //post contents
 .postInfoWrapper {
     padding: 5rem 0 3rem;
-    border-bottom: .1rem solid #ddd;
 
-    .postTitle {
-        padding-bottom: 2rem;
-        text-align: center;
+    .postContents {
+        padding-bottom: 1rem;
 
-        h1 {
-            font-size: 2.8rem;
-            font-weight: normal;
-        }
+        .postTitle {
+            padding-bottom: 2rem;
+            text-align: center;
 
-        p.post-meta {
-            font-size: 1.2rem;
-            color: #999;
-        }
-    }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: normal;
+            }
 
-    .postContent {
-        font-size: 1.6rem;
-        color: #666;
-    }
-
-    .pageNavigation {
-        padding: 4rem 0 3rem;
-        text-align: center;
-
-        a {
-            position: relative;
-            display: inline-block;
-            font-size: 1.4rem;
-            color: #999;
-            line-height: 1;
-
-            .listIndex {
-                display: block;
-                padding: .2rem .6rem;
-                border: .1rem solid #999;
-                line-height: 1;
+            p.post-meta {
+                font-size: 1.2rem;
                 color: #999;
             }
+        }
 
-            &:hover {
-                text-decoration: none;
-            }
+        .postContent {
+            font-size: 1.6rem;
+            color: #666;
 
-            &.arrow {
-                em {
-                    font-size: 0;
-                }
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    width: 0;
-                    height: 0;
-                    margin: auto 0;
-                    border: .6rem solid #999;
-                    border-top-color: rgba(0,0,0,0);
-                    border-bottom-color: rgba(0,0,0,0);
+            p {
+                a {
+                    color: #08c;
                 }
             }
+        }
+    }
 
-            &.prev {
-                padding-left: 1rem;
-                margin-right: 1rem;
+    .pagination {
+        padding: 2rem 0;
+        font-size: 0;
+        text-align: center;
+        
+        .arrow {
+            display: inline-block;
+            padding: .7rem 1rem;
+            margin: 0 .2rem;
+            background: #ddd;
+            font-size: 1.6rem;
+            line-height: 1;
 
-                &:after {
-                    left: 0;
-                    border-left: 0;
-                }
-            }
-
-            &.next {
-                padding-right: 1rem;
-                margin-left: 1rem;
-
-                &:after {
-                    right: 0;
-                    border-right: 0;
-                }
+            &:active {
+                background: #ccc;
             }
         }
     }
 
     .postListWrap {
+        margin-top: 1rem;
         padding: 2rem;
         border: .1rem solid #ccc;
 
@@ -331,24 +241,20 @@
                         display: block;
                         width: 100%;
                         padding-left: 1rem;
-                        font-size: 1.4rem;
-                        line-height: 1;
-                        color: #999;
+                        font-size: 1.6rem;
+                        color: #666;
 
                         &:before {
-                            content: '';
+                            content: "\2022";
                             position: absolute;
-                            top: 0;
+                            top: .4rem;
                             left: 0;
-                            bottom: 0;
-                            width: .4rem;
-                            height: .1rem;
-                            margin: auto 0;
-                            background-color: #999;
+                            font-size: .6rem;
                         }
 
-                        .postMeta {
+                        .date {
                             font-size: 1.2rem;
+                            color: #999;
                         }
                     }
                 }
