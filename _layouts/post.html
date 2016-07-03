@@ -12,6 +12,15 @@ layout: default
 
       <article class="postContent">
         {{ content }}
+
+        {% if page.tags.size > 0 %}
+          <div class="tag">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            {% for tag in page.tags %}
+              <a href="/tag?#{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
       </article>
     </div>
 

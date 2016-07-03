@@ -108,8 +108,24 @@
     }
 
     .postListWrap {
+
+        &.tag {
+            .tagPartWrap {
+                padding-bottom: 3.5rem;
+
+                .tagName {
+                    font-size: 2.4rem;
+                    line-height: 1;
+                    padding-bottom: 1.5rem;
+                }
+            }
+        }
+
         .postList {
             ul {
+                font-size: 1.6rem;
+                color: #222;
+                
                 li {
                     position: relative;
 

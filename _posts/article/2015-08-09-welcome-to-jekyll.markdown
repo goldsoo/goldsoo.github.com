@@ -4,6 +4,9 @@ title:  "jquery Ajax"
 date:   2015-08-09 12:15:14
 categories: article
 comments: ture
+tags:
+- scss
+- javascript
 ---
 
 Jekyll also offers powerful support for code snippets:

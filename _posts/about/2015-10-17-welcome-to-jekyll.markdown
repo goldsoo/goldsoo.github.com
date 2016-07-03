@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "list6"
-date:   2015-10-17 12:15:14
+date: 2015-10-17 12:15:14
 categories: about
 ---
 

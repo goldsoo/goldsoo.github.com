@@ -3,6 +3,8 @@ layout: post
 title:  "list5"
 date:   2015-10-16 12:15:14
 categories: about
+tags:
+- javascript
 ---
 
 안녕
