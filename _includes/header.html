@@ -4,13 +4,29 @@
       <a class="mainTitle" href="{{ site.baseurl }}/">{{ site.title }}</a>
       <nav class="siteGnbWrap">
         <ul>
-          {% for category in site.categories %}
-            <li>
-                <a href="/{{ category | first }}/">{{ category | first }}</a>
-            </li>
+          {% for page in site.pages %}
+            {% if page.permalink %}
+              <li>
+                  <a href="{{ page.url }}">{{ page.title }}</a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </nav>
+      <div class="tagLayerWrapper">
+        <button class="tagBtn" type="button">
+          <i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="layerWrap">
+          <ul>
+            {% for category in site.categories %}
+              <li>
+                <a href="/{{ category | first }}">{{ category | first }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </header>
