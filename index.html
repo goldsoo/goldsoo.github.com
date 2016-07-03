@@ -5,12 +5,6 @@ comments: false
 ---
 
 <div class="mainIntroWrap">
-  <div class="wrapper">
-    <div class="mainImg">
-      <img src="http://placehold.it/740x250/ffffff">
-    </div>
-  </div>
-
   <div class="postListWrap">
     <div class="wrapper">
       <div class="postList">
@@ -19,6 +13,7 @@ comments: false
             <li>
               <a class="title" href="{{ post.url }}">
                 <span class="title">{{ post.title }}</span>
+                <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
                 <span class="contents">{{ post.excerpt | strip_html | truncatewords: 40 }}</span>
               </a>
                <a class="counter" href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
