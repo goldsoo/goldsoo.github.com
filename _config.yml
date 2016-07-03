@@ -10,7 +10,7 @@ github_username:  goldsoo
 comments: disqus_shortname _goldsoo  #disqus
 
 # pagination
-paginate: 3
+paginate: 15
 paginate_path: /list/:num
 
 # Build settings
