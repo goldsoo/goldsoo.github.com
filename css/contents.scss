@@ -5,46 +5,31 @@
 
 //main
 .mainIntroWrap {
-    .mainImg {
-        border-left: .1rem solid #ddd;
-        border-right: .1rem solid #ddd;
-
-        img {
-            width: 100%;
-        }
-    }
-
     .postListWrap {
-        padding: 3rem 0;
-        border-top: .1rem solid #ddd;
-        font-size: 1.6rem;
+        padding: 5rem 0;
 
         .postList {
-            padding: 2rem;
-            margin-bottom: 3rem;
-            border: .1rem solid #ddd;
-
             ul {
+                font-size: 1.6rem;
+                color: #222;
+                
                 li {
                     position: relative;
-                    margin-top: 1.5rem;
                     padding-left: 1rem;
 
-                    &:first-child {
-                        margin-top: 0;
+                    + li {
+                        margin-top: 4.5rem;
                     }
 
                     &:before {
                         content: "\2022";
                         position: absolute;
-                        top: .6rem;
+                        top: .2rem;
                         left: 0;
-                        font-size: .6rem;
                     }
 
                     a {
                         padding-bottom: .5rem;
-                        color: #222;
 
                         &.counter {
                             font-size: 1.2rem;
@@ -54,14 +39,16 @@
                         .title {
                             display: block;
                             padding-bottom: .5rem;
-                            font-size: 2rem;
+                            font-size: 2.4rem;
                             line-height: 1;
                             font-weight: 300;
                         }
 
-                        .contents {
-                            font-size: 1.6rem;
-                            color: #666;
+                        .date {
+                            display: block;
+                            margin-bottom: .5rem;
+                            font-size: 1.2rem;
+                            color: #999;
                         }
                     }
 
@@ -98,12 +85,13 @@
     padding: 5rem 0;
 
     .postTitle {
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
 
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.8rem;
+            line-height: 1;
             font-weight: normal;
-            color: #555;
+            color: #407ccb;
         }
     }
 
@@ -143,8 +131,6 @@
                         position: relative;
                         display: block;
                         padding-left: 1rem;
-                        font-size: 1.6rem;
-                        color: #222;
 
                         &:before {
                             content: "\2022";
@@ -213,6 +199,32 @@
             p {
                 a {
                     color: #08c;
+                }
+            }
+
+            .tag {
+                padding-top: 1rem;
+                color: #999;
+
+                i {
+                    &:before {
+                        position: relative;
+                        top: .2rem;
+                    }
+                }
+
+                a {
+                    font-size: 1.4rem;
+                    line-height: 1;
+                    color: #999;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    + a {
+                        padding-left: .3rem;
+                    }
                 }
             }
         }
